@@ -1,0 +1,48 @@
+
+        
+        <H1>
+            Order details ! 
+        </H1>
+
+        
+        <div class="container">
+            
+            </div>
+
+            
+                {{#each orders}}
+             
+                  
+                  <table width="100%">
+  <tr>
+    
+    <th>So Order</th>
+    <th>Ten Khach Hang</th>
+    <th>So loai don hang</th>
+    <th>Tong so tien</th>
+    <th>Thoi gian mua</th>
+    <th>Ma so NV</th>
+  </tr>
+  <tr>
+    
+    <td>{{this.MaSoOrder}}</td>
+    <td>{{this.TenKhachHang}}</td>
+    <td>{{this.SoLoaiHangTrongDon}}</td>
+    <td>{{this.TongSoTien}}</td>
+    <td>{{this.ThoigianMua}}</td>
+    <td>{{this.MaSoNv}}</td>
+
+    </tr>
+  
+</table>
+                   
+                {{/each}}
+            </div>
+
+            
+            
+        </div>
+
+       
+
+

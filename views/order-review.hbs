@@ -1,0 +1,62 @@
+
+        
+        <H1>
+            Order details ! 
+        </H1>
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-1">Index</div>
+                <div class="col-1">MaSP</div>
+                <div class="col-2"></div>
+                <div class="col-2">TenSP</div>
+                <div class="col-3">GiaBan</div>
+                <div class="col-1">SoLuong</div>
+                <div class="col-2">Thanh Tien</div>
+            </div>
+
+            <div class="row">
+                {{#each orderdetails}}
+
+                    <div class="col-1">
+                        {{@key}}
+                    </div>
+                    <div class="col-1">
+                        {{this.[0]}}
+                    </div>
+                    <div class="col-2">
+                        <img width="100px" src="{{this.[1].[3]}}" />
+                    </div>
+                    <div class="col-3">
+                        {{this.[1].[0]}}
+                    </div>
+                    <div class="col-2">
+                        {{this.[1].[1]}}
+                    </div>
+                    <div class="col-1">
+                        {{this.[1].[2]}}
+                    </div>
+                    <div class="col-2">
+                        {{this.[1].[4]}}
+                    </div>
+                   
+                {{/each}}
+            </div>
+
+            <div class="row">
+                <div class="col-10">Tong: </div>
+                <div class="col-2"><b>{{total}}</b> vnd</div>                
+            </div>
+            <div class="row">
+                <div class="col-10"></div>
+                <div class="col-2"><button type="submit" class="btn btn-primary">Checkout</button></div>
+            </div>
+            
+        </div>
+
+        <form action="/order/review" method="POST" id="submitOrder">
+            <input type="text" hidden id="dshang" name="dshang">
+        </form>
+
+
